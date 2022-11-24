@@ -10,7 +10,7 @@ function constructUrl(text){
         return url + "?text=" + text 
     }
 function clickHandler(){
-    var text = inputText.value; 
+    var text = inputText.value 
     
     fetch(constructUrl(text))
     .then (response => response.json() )
@@ -18,7 +18,7 @@ function clickHandler(){
         var translatedText = json.contents.translated;
         outputBox.innerText = translatedText;
     })
-    .catch(errorHandler);
+    
 }
 
 
